@@ -1,0 +1,6 @@
+h1. Data Bank
+
+Ever want to save data for later, but don't want the overhead of a database, or parsing large files into objects?  With the data bank you can store an object in the same file as the defined class.  Data Bank is just a little hack I tried out to learn how to marshal data.
+
+**Copyright (c) 2008 Amos L. King, released under the MIT license**
+
