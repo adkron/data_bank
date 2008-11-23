@@ -2,5 +2,29 @@ h1. Data Bank
 
 Ever want to save data for later, but don't want the overhead of a database, or parsing large files into objects?  With the data bank you can store an object in the same file as the defined class.  Data Bank is just a little hack I tried out to learn how to marshal data.
 
+h2. Useage
+
+<pre>
+  <code>
+    require 'data_bank'
+    
+    class MyObject
+      attr_accessor :data
+      
+      def initialize(data)
+        @data = data
+      end
+    end
+    
+    my_object = DataBank.withdraw || MyObject.new(1)
+    my_object.data += 1
+    puts my_object.data
+    DataBank.deposit my_object
+  </code>
+</pre>
+
+
+
+
 **Copyright (c) 2008 Amos L. King, released under the MIT license**
 
