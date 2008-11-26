@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'data_bank'
 
 class MyObject
