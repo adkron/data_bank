@@ -8,7 +8,7 @@ Echoe.new('data_bank', '0.1.0') do |p|
   p.url            = 'http://github.com/Adkron/databank'
   p.author         = 'Amos King'
   p.email          = 'amos.l.king@gmail.com'
-  p.ignore_pattern = ['tmp/*', 'script/*']
+  p.ignore_pattern = ['tmp/*', 'script/*', 'example.rb']
   p.development_dependencies = []
 end
 
