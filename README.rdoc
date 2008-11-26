@@ -4,7 +4,7 @@ Ever want to save data for later, but don't want the overhead of a database, or 
 
 == Install
 
-  gem install adkron-databank --source http://gems.github.com
+  gem install Adkron-data_bank --source http://gems.github.com
 
 == Example
 
