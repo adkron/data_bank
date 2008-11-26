@@ -8,22 +8,29 @@
 require 'base64'
 
 class DataBank
+  
+  # Takes the path and the filename of the data store.
+  def initialize(path, filename)
+    @path = path
+    @filename = filename
+  end
+  
   # Stores a base64 encoded representation of a class at
-  # the end of the file it is called from.  Also adds the
-  # __END__ directive to let the interperter know not to
-  # go beyond that point.  On subsequent calls it will
-  # replace the data with the new data passed in.
-  def self.deposit(data)
-    code = File.read($0).gsub(/\n^__END__.*$/m, '')
-    File.open($0, 'w') do |file|
-      file.write "#{code}\n__END__\n"
+  # the end of the file specified in initialize.  On
+  # subsequent calls it will replace the data with the
+  # new data passed in.
+  def deposit(data)
+    File.open("#{@path}/#{@filename}", 'w+') do |file|
       file.write Base64.encode64(Marshal.dump(data))
     end
   end
   
   # Loads the data stored at the end of the file form
   # which it is called.  If data is present.
-  def self.withdraw
-    Marshal.load(Base64.decode64(DATA.read)) rescue NameError
+  def withdraw
+    if File.exists?("#{@path}/#{@filename}")
+      data = File.read "#{@path}/#{@filename}"
+      Marshal.load(Base64.decode64(data)) rescue NameError
+    end
   end
 end

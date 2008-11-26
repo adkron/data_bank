@@ -9,10 +9,12 @@
 #   end
 # end
 # 
-# my_object = DataBank.withdraw || MyObject.new(1)
+# db = DataBank.new ".", "data_bank.data"
+# 
+# my_object = db.withdraw || MyObject.new(1)
 # my_object.data += 1
 # puts my_object.data
-# DataBank.deposit my_object
+# db.deposit my_object
 
 require 'rubygems'
 require 'data_bank'
@@ -25,7 +27,9 @@ class MyObject
   end
 end
 
-my_object = DataBank.withdraw || MyObject.new(1)
+db = DataBank.new ".", "data_bank.data"
+
+my_object = db.withdraw || MyObject.new(1)
 my_object.data += 1
 puts my_object.data
-DataBank.deposit my_object
+db.deposit my_object
