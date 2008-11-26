@@ -1,11 +1,13 @@
-h1. Data Bank
+= Data Bank
 
 Ever want to save data for later, but don't want the overhead of a database, or parsing large files into objects?  With the data bank you can store an object in the same file as the defined class.  Data Bank is just a little hack I tried out to learn how to marshal data.
 
-h2. Useage
+== Install
 
-<pre>
-  <code>
+  gem install adkron-databank --source http://gems.github.com
+
+== Example
+
     require 'data_bank'
     
     class MyObject
@@ -20,8 +22,6 @@ h2. Useage
     my_object.data += 1
     puts my_object.data
     DataBank.deposit my_object
-  </code>
-</pre>
 
 
 
