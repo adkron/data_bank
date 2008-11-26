@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = ['lib/data_bank.rb', 'MIT-LICENSE', 'Rakefile', 'README.rdoc', 'Manifest', 'data_bank.gemspec']
   s.has_rdoc = true
   s.homepage = %q{http://github.com/Adkron/databank}
-  s.rdoc_options = ['--line-numbers', '--inline-source', '--title', 'Data_bank', '--main', 'README.rdoc']
+  s.rdoc_options = ['--line-numbers', '--inline-source', '--title', 'Data Bank', '--main', 'README.rdoc']
   s.require_paths = ['lib']
   s.rubyforge_project = %q{data_bank}
   s.rubygems_version = %q{1.3.1}
