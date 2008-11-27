@@ -19,10 +19,12 @@ Ever want to save data for later, but don't want the overhead of a database, or 
       end
     end
 
-    my_object = DataBank.withdraw || MyObject.new(1)
+    db = DataBank.new ".", "data_bank.data"
+
+    my_object = db.withdraw || MyObject.new(1)
     my_object.data += 1
     puts my_object.data
-    DataBank.deposit my_object
+    db.deposit my_object
 
 
 
