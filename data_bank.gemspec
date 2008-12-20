@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Amos King"]
-  s.date = %q{2008-11-25}
+  s.date = %q{2008-12-19}
   s.description = %q{Marshal data to be loaded on sequential runs of your script.}
   s.email = %q{amos.l.king@gmail.com}
-  s.extra_rdoc_files = ["lib/data_bank.rb", "README.rdoc", "MIT-LICENSE"]
+  s.extra_rdoc_files = ["lib/data_bank.rb", "README.rdoc"]
   s.files = ["lib/data_bank.rb", "MIT-LICENSE", "Rakefile", "README.rdoc", "Manifest", "data_bank.gemspec"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/Adkron/databank}
